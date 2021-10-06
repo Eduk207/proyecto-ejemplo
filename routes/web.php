@@ -27,55 +27,55 @@ use App\Http\Controllers\ingresoController;
 
 
 
-Route::get('/', HomeController::class);
+Route::get('/home', [HomeController::class,'index']);
 
 //Reo
-Route::get('reo', [reoController::class, 'index']);
-Route::get('reo/create', [reoController::class, 'create']);
-Route::get('reo/{reo}', [reoController::class, 'show']);
+Route::get('reo', [ReoController::class, 'index']);
+Route::get('reo/create', [ReoController::class, 'create']);
+Route::get('reo/{reo}', [ReoController::class, 'show']);
 
 //Ubicacion
-Route::get('ubicacion', [ubicacionController::class, 'index']);
-Route::get('ubicacion/create', [ubicacionController::class, 'create']);
-Route::get('ubicacion/{ubicacion}', [ubicacionController::class, 'show']);
+Route::get('ubicacion', [UbicacionController::class, 'index']);
+Route::get('ubicacion/create', [UbicacionController::class, 'create']);
+Route::get('ubicacion/{ubicacion}', [UbicacionController::class, 'show']);
 
 //Delito
-Route::get('delito', [delitoController::class, 'index']);
-Route::get('delito/create', [delitoController::class, 'create']);
-Route::get('delito/{delito}', [delitoController::class, 'show']);
+Route::get('delito', [DelitoController::class, 'index']);
+Route::get('delito/create', [DelitoController::class, 'create']);
+Route::get('delito/{delito}', [DelitoController::class, 'show']);
 
 //Difunto
-Route::get('difunto', [difuntoController::class, 'index']);
-Route::get('difunto/create', [difuntoController::class, 'create']);
-Route::get('difunto/{difunto}', [difuntoController::class, 'show']);
+Route::get('difunto', [DifuntoController::class, 'index']);
+Route::get('difunto/create', [DifuntoController::class, 'create']);
+Route::get('difunto/{difunto}', [DifuntoController::class, 'show']);
 
 //Fuga
-Route::get('fuga', [fugaController::class, 'index']);
-Route::get('fuga/create', [fugaController::class, 'create']);
-Route::get('fuga/{fuga}', [fugaController::class, 'show']);
+Route::get('fuga', [FugaController::class, 'index']);
+Route::get('fuga/create', [FugaController::class, 'create']);
+Route::get('fuga/{fuga}', [FugaController::class, 'show']);
 
 //Condena
-Route::get('condena', [condenaController::class, 'index']);
-Route::get('condena/create', [condenaController::class, 'create']);
-Route::get('condena/{condena}', [condenaController::class, 'show']);
+Route::get('condena', [CondenaController::class, 'index']);
+Route::get('condena/create', [CondenaController::class, 'create']);
+Route::get('condena/{condena}', [CondenaController::class, 'show']);
 
 //Excarselado
-Route::get('excarselado', [excarseladoController::class, 'index']);
-Route::get('excarselado/create', [excarseladoController::class, 'create']);
-Route::get('excarselado/{excarselado}', [excarseladoController::class, 'show']);
+Route::get('excarselado', [ExcarseladoController::class, 'index']);
+Route::get('excarselado/create', [ExcarseladoController::class, 'create']);
+Route::get('excarselado/{excarselado}', [ExcarseladoController::class, 'show']);
 
 //Reo_delito
-Route::get('reo_delito', [reo_delitoController::class, 'index']);
-Route::get('reo_delito/create', [reo_delitoController::class, 'create']);
-Route::get('reo_delito/{reo_delito}', [reo_delitoController::class, 'show']);
+Route::get('reo_delito', [Reo_delitoController::class, 'index']);
+Route::get('reo_delito/create', [Reo_delitoController::class, 'create']);
+Route::get('reo_delito/{reo_delito}', [Reo_delitoController::class, 'show']);
 
 //Rasgos
-Route::get('rasgos', [rasgosController::class, 'index']);
-Route::get('rasgos/create', [rasgosController::class, 'create']);
-Route::get('rasgos/{rasgos}', [rasgosController::class, 'show']);
+Route::get('rasgos', [RasgosController::class, 'index']);
+Route::get('rasgos/create', [RasgosController::class, 'create']);
+Route::get('rasgos/{rasgos}', [RasgosController::class, 'show']);
 
 //Ingreso
-Route::get('ingreso', [ingresoController::class, 'index']);
-Route::get('ingreso/create', [ingresoController::class, 'create']);
-Route::get('ingreso/{ingreso}', [ingresoController::class, 'show']);
+Route::get('ingreso', [IngresoController::class, 'index']);
+Route::get('ingreso/create', [IngresoController::class, 'create']);
+Route::get('ingreso/{ingreso}', [IngresoController::class, 'show']);
 
