@@ -14,16 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\reoController;
-use App\Http\Controllers\ubicacionController;
-use App\Http\Controllers\delitoController;
-use App\Http\Controllers\difuntoController;
-use App\Http\Controllers\fugaController;
-use App\Http\Controllers\condenaController;
-use App\Http\Controllers\excarseladoController;
-use App\Http\Controllers\reo_delitoController;
-use App\Http\Controllers\rasgosController;
-use App\Http\Controllers\ingresoController;
+use App\Http\Controllers\ReoController;
+use App\Http\Controllers\UbicacionController;
+use App\Http\Controllers\DelitoController;
+use App\Http\Controllers\DifuntoController;
+use App\Http\Controllers\FugaController;
+use App\Http\Controllers\CondenaController;
+use App\Http\Controllers\ExcarseladoController;
+use App\Http\Controllers\Reo_delitoController;
+use App\Http\Controllers\RasgosController;
+use App\Http\Controllers\IngresoController;
 
 
 
