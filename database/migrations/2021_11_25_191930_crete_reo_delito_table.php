@@ -13,7 +13,13 @@ class CreteReoDelitoTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('reo_delito', function (Blueprint $table) {
+            $table->string('situacion');
+            $table->foreign('codigo_reo')->references('codigo_reo')->on('reo');
+            $table->foreign('codigo_ubicacion')->references('codigo_ubicacion')->on('ubicacion');
+            $table->foreign('codigo_delito')->references('codigo_delito')->on('delito');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreteReoDelitoTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('reo_delito');
     }
 }

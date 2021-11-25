@@ -13,7 +13,13 @@ class CreteIngresoTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('ingreso', function (Blueprint $table) {
+            $table->string('nro_boleta');
+            $table->string('nro_orden');
+            $table->date('fecha_ingreso');
+            $table->foreign('codigo_reo')->references('codigo_reo')->on('reo');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreteIngresoTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('ingreso');
     }
 }

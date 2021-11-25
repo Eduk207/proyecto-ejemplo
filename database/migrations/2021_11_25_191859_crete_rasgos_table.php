@@ -13,7 +13,13 @@ class CreteRasgosTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('rasgos', function (Blueprint $table) {
+            $table->string('estatura');
+            $table->string('contextura');
+            $table->string('color_piel');
+            $table->foreign('codigo_reo')->references('codigo_reo')->on('reo');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreteRasgosTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rasgos');
     }
 }
