@@ -14,6 +14,9 @@ class CreteReoDelitoTable extends Migration
     public function up()
     {
         Schema::create('reo_delito', function (Blueprint $table) {
+            $table->unsignedBigInteger('codigo_reo');
+            $table->unsignedBigInteger('codigo_ubicacion');
+            $table->unsignedBigInteger('codigo_delito');
             $table->string('situacion');
             $table->foreign('codigo_reo')->references('codigo_reo')->on('reo');
             $table->foreign('codigo_ubicacion')->references('codigo_ubicacion')->on('ubicacion');

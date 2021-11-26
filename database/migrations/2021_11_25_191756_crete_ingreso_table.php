@@ -14,6 +14,7 @@ class CreteIngresoTable extends Migration
     public function up()
     {
         Schema::create('ingreso', function (Blueprint $table) {
+            $table->unsignedBigInteger('codigo_reo');
             $table->string('nro_boleta');
             $table->string('nro_orden');
             $table->date('fecha_ingreso');

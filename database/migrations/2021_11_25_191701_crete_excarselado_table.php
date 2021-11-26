@@ -15,6 +15,7 @@ class CreteExcarseladoTable extends Migration
     {
         Schema::create('excarselado', function (Blueprint $table) {
             $table->id('codigo_excarselado');
+            $table->unsignedBigInteger('codigo_reo');
             $table->string('tipo_libertad');
             $table->string('tribunal');
             $table->foreign('codigo_reo')->references('codigo_reo')->on('reo');

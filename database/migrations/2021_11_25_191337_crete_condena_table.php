@@ -15,6 +15,7 @@ class CreteCondenaTable extends Migration
     {
         Schema::create('condena', function (Blueprint $table) {
             $table->id('codigo_condena');
+            $table->unsignedBigInteger('codigo_reo');
             $table->string('descripcion');
             $table->date('fecha_condena');
             $table->foreign('codigo_reo')->references('codigo_reo')->on('reo');
@@ -29,6 +30,6 @@ class CreteCondenaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('condena');
+        Schema::dropIfExists('');
     }
 }

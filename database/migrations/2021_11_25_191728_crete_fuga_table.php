@@ -14,6 +14,7 @@ class CreteFugaTable extends Migration
     public function up()
     {
         Schema::create('fuga', function (Blueprint $table) {
+            $table->unsignedBigInteger('codigo_reo');
             $table->date('fecha_fuga');
             $table->string('descripcion');
             $table->foreign('codigo_reo')->references('codigo_reo')->on('reo');

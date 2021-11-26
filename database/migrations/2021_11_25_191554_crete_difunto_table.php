@@ -14,6 +14,7 @@ class CreteDifuntoTable extends Migration
     public function up()
     {
         Schema::create('difunto', function (Blueprint $table) {
+            $table->unsignedBigInteger('codigo_reo');
             $table->date('fecha_muerte');
             $table->string('lugar_muerte');
             $table->string('causa');

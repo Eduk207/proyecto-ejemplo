@@ -14,6 +14,7 @@ class CreteRasgosTable extends Migration
     public function up()
     {
         Schema::create('rasgos', function (Blueprint $table) {
+            $table->unsignedBigInteger('codigo_reo');
             $table->string('estatura');
             $table->string('contextura');
             $table->string('color_piel');
