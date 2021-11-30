@@ -30,9 +30,12 @@ use App\Http\Controllers\IngresoController;
 Route::get('/home', [HomeController::class,'index']);
 
 //Reo
-Route::get('reo', [ReoController::class, 'index']);
-Route::get('reo/create', [ReoController::class, 'create']);
-Route::get('reo/{reo}', [ReoController::class, 'show']);
+Route::get('reo', [ReoController::class, 'index'])->name('reo.index');
+Route::get('reo/create', [ReoController::class, 'create'])->name('reo.create');
+Route::post('reo', [ReoController::class, 'store'])->name('reo.store');
+Route::get('reo/{reo}', [ReoController::class, 'show'])->name('reo.show');
+Route::get('reo/{reo}/edit', [ReoController::class, 'edit'])->name('reo.edit');
+Route::put('reo/{reo}', [ReoController::class, 'update'])->name('reo.update');
 
 //Ubicacion
 Route::get('ubicacion', [UbicacionController::class, 'index']);
